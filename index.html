@@ -1,17 +1,39 @@
 <html>
     <head>
         <script>
+			var common = "000000";
+
             function calculate() {
-                var result = document.getElementById("select_01").value
-                    + document.getElementById("select_02").value
-                    + document.getElementById("select_03").value
-                    + document.getElementById("select_04").value
-                    + document.getElementById("select_05").value
-                    + document.getElementById("select_06").value;
+                var result = document.getElementById("select_01").value + common
+                    + document.getElementById("select_05").value + common
+                    + document.getElementById("select_02").value + common
+                    + document.getElementById("select_03").value + common
+                    + document.getElementById("select_04").value + common
+                    + document.getElementById("select_06").value + common
 					+ document.getElementById("select_07").value;
+					
                 document.getElementById("txt_result").value = result;
             }
-        </script>
+		</script>
+		<style>
+			body * {
+				display:block;
+				margin:5px;
+			}
+
+			select {
+				height:40px;
+				width:160px;
+			}
+			button{
+				height:40px;
+				width:160px;
+			}
+			textarea {
+			height:80px;
+				width:160px;
+			}
+		</style>
     </head>
     <body>
         <select id="select_01">
@@ -55,43 +77,7 @@
 				<option value="34">미라이 (캐릭터)</option>
         </select>
         <select id="select_02">
-				<option value="08" selected>라라 (캐릭터)</option>
-				<option value="09">미래 (캐릭터)</option>
-				<option value="0A">소피 (캐릭터)</option>
-				<option value="0B">안경언니 (캐릭터)</option>
-				<option value="0C">시온 (캐릭터)</option>
-				<option value="0D">도로시 (캐릭터)</option>
-				<option value="0E">레오나 (캐릭터)</option>
-				<option value="0F">파루루 (캐릭터)</option>
-				<option value="10">코스모 (캐릭터)</option>
-				<option value="11">각성 파루루 (캐릭터)</option>
-				<option value="15">미캉 (캐릭터)</option>
-				<option value="16">아로마 (캐릭터)</option>
-				<option value="17">후와리 (캐릭터)</option>
-				<option value="18">아티 (캐릭터)</option>
-				<option value="19">히비키 (캐릭터)</option>
-				<option value="1D">미나미미레이 (캐릭터)</option>
-				<option value="2D">가루루 (캐릭터)</option>
-				<option value="2E">쥬논 (캐릭터)</option>
-				<option value="2F">피논 (캐릭터)</option>
-				<option value="30">쥬리 (캐릭터)</option>
-				<option value="31">카논 (캐릭터)</option>
-				<option value="37">논 (캐릭터)</option>
-				<option value="38">치리 (캐릭터)</option>
-				<option value="39">페퍼 (캐릭터)</option>
-				<option value="4F">쟈니스 (캐릭터)</option>
-				<option value="51">유이 (캐릭터)</option>
-				<option value="57">파라라 (캐릭터)</option>
-				<option value="59">니노 (캐릭터)</option>
-				<option value="5E">미루 (캐릭터)</option>
-				<option value="63">슈카 (캐릭터)</option>
-				<option value="76">미아(아미) (캐릭터)</option>
-				<option value="77">가라라 (캐릭터)</option>
-				<option value="78">미라이 (캐릭터)</option>
-				<option value="1E">[DLC] 라라</option>
-				<option value="1F">[DLC] 미래</option>
-				<option value="20">[DLC] 소피</option>
-				<option value="01">쇼트</option>
+				<option value="01" selected>쇼트</option>
 				<option value="02">세미롱</option>
 				<option value="04">트윈번헤어</option>
 				<option value="06">사이드 포니테일</option>
@@ -121,8 +107,6 @@
 				<option value="68">시스터 웨이브</option>
 				<option value="6A">쿨 메쉬 트윈테일</option>
 				<option value="6F">소프트 보브</option>
-        </select>
-        <select id="select_03">
 				<option value="08">라라 (캐릭터)</option>
 				<option value="09">미래 (캐릭터)</option>
 				<option value="0A">소피 (캐릭터)</option>
@@ -159,75 +143,139 @@
 				<option value="1E">[DLC] 라라</option>
 				<option value="1F">[DLC] 미래</option>
 				<option value="20">[DLC] 소피</option>
-				<option value="01">쇼트</option>
-				<option value="02">세미롱</option>
-				<option value="04">트윈번헤어</option>
-				<option value="06">사이드 포니테일</option>
-				<option value="07">웨이브 트윈테일</option>
-				<option value="12">아이돌 포니테일</option>
-				<option value="14">해피나루 보브</option>
-				<option value="1B">프린세스 시뇽</option>
-				<option value="1C">쿠루링트윈테일</option>
-				<option value="33">후와후와 보브</option>
-				<option value="43">경단 묶은머리</option>
-				<option value="44">사이드 하프업</option>
-				<option value="47">매쉬쇼트</option>
-				<option value="4A">말괄량이 보브</option>
-				<option value="4B">쇼트울프컷</option>
-				<option value="4D">소프트 프린세스</option>
-				<option value="4E">내츄럴 보브</option>
-				<option value="52">소프트 땋은머리</option>
-				<option value="54">뜨개질 롱</option>
-				<option value="55">어른 시뇽</option>
-				<option value="56">소프트 포니테일</option>
-				<option value="5A">경단 넘긴머리</option>
-				<option value="5C">스트레이트 쇼트</option>
-				<option value="5D">트윈테일 걸</option>
-				<option value="61">아이돌 트윈테일</option>
-				<option value="62">긴 생머리</option>
-				<option value="64">곰돌이 묶음머리</option>
-				<option value="68">시스터 웨이브</option>
-				<option value="6A">쿨 메쉬 트윈테일</option>
-				<option value="6F">소프트 보브</option>
 
         </select>
-        <select id="select_04">
-					<option value="01">모카 브라운</option>
-					<option value="02">스카이 블루</option>
-					<option value="03">퓨어 스트로베리</option>
-					<option value="04">튀는 멜론 소다</option>
-					<option value="06">매직 파티</option>
-					<option value="08">반짝 반짝 문라이트</option>
-					<option value="09">엔젤 하트(라라dlc)</option>
-					<option value="0A">슈팅 스타(미래dlc)</option>
-					<option value="0B">나이트 오브 다크니스</option>
-					<option value="0C">이터널 루즈</option>
-					<option value="0D">시크릿 레인보우</option>
-					<option value="0E">또렷하게그린?(라라dlc)</option>
-					<option value="0F">오션 머메이드</option>
-					<option value="13">레이니 물방울</option>
-					<option value="14">칠석제 스타</option>
-					<option value="15">불꽃놀이</option>
-					<option value="17">캣츠 아이</option>
-					<option value="18">왼파/오른노란(소피dlc)</option>
-					<option value="1D">큐피드</option>
-					<option value="19">클래식 인형</option>
-					<option value="20">스칼렛 루비</option>
-					<option value="22">크리스마스 컬러렌즈</option>
-					<option value="23">마시멜로우 오렌지</option>
-					<option value="28">글썽 글썽 눈동자</option>
-					<option value="29">반해버린 하트</option>
-					<option value="2A">쥬얼리 심포니</option>
-					<option value="2C">사일런트 그레이</option>
-					<option value="2D">레드블루 컬러렌즈</option>
-					<option value="2F">????? (미래dlc)</option>
-					<option value="33">트윈캣 컬러렌즈(라라dlc)</option>
-					<option value="34">또렷하게 그린</option>
-					<option value="35">유메카와☆아이</option>
-					<option value="36">차분한 블랙</option>
-					<option value="3A">또렷하게 옐로우</option>
-					<option value="3D">그린티</option>
-					<option value="41">보라고양눈(라라dlc)</option>
+        <select id="select_03">
+				<option value="01" selected>슈가 브라운</option>
+				<option value="02">초콜릿 브라운</option>
+				<option value="03">미드나잇 블랙</option>
+				<option value="04">써니 오렌지</option>
+				<option value="05">카나리아 옐로우</option>
+				<option value="06">루즈 레드</option>
+				<option value="07">스노우 화이트</option>
+				<option value="08">체리 핑크</option>
+				<option value="09">파스텔 블루</option>
+				<option value="0A">마린 블루</option>
+				<option value="0B">에메랄드 그린</option>
+				<option value="0C">베리 퍼플</option>
+				<option value="0D">크림 옐로우</option>
+				<option value="0E">젠틀 오렌지</option>
+				<option value="0F">밀크티 브라운</option>
+				<option value="10">레드 브라운</option>
+				<option value="11">페일 핑크</option>
+				<option value="12">블루 그린</option>
+				<option value="14">퓨어 블랙</option>
+				<option value="16">셔벗 퍼플</option>
+				<option value="1A">프렌치 당근</option>
+				<option value="25">아이비 그린</option>
+				<option value="26">블루 퍼플</option>
+				<option value="27">옐로우 브라운</option>
+				<option value="28">딥 블루</option>
+				<option value="29">애쉬 그레이</option>
+				<option value="2A">브라이트 골드</option>
+				<option value="2C">나팔꽃 블루</option>
+				<option value="2B">핑크 베이지</option>
+				<option value="33">다크 그린</option>
+				<option value="38">마시마로 핑크</option>
+				<option value="39">마시마로 옐로우</option>
+				<option value="3A">마시마로 블루</option>
+				<option value="37">감청색</option>
+				<option value="34">회색 빛 블루</option>
+				<option value="35">핑크 브라운</option>
+				<option value="36">청록색</option>
+				<option value="3B">클래식핑크</option>
+				<option value="3C">마시마로 오렌지</option>
+				<option value="3D">마시마로 그린</option>
+				<option value="3E">노블 레드</option>
+				<option value="3F">마시마로 퍼플</option>
+				<option value="40">블로썸 핑크</option>
+				<option value="41">샴페인 골드</option>
+				<option value="42">퓨어 블랙</option>
+				<option value="43">퓨어 화이트</option>
+				<option value="44">와카바 그린</option>
+				<option value="45">네온 오렌지</option>
+				<option value="46">아름다운 경관 퍼플</option>
+				<option value="4B">호박 옐로우</option>
+				<option value="4C">클래식 핑크</option>
+				<option value="4D">네온 퍼플</option>
+				<option value="4E">부드러운 그레이</option>
+				<option value="4F">네온 핑크</option>
+				<option value="50">레이크 블루</option>
+				<option value="51">냉동 화이트</option>
+				<option value="55">회색 빛 퍼플</option>
+				<option value="56">클래식 블루</option>
+				<option value="57">내츄럴 그린</option>
+				<option value="58">클래식 레드</option>
+				<option value="17">라라 퍼플</option>
+				<option value="18">미래 옐로</option>
+				<option value="19">소피 핑크</option>
+				<option value="1B">시온 퍼플</option>
+				<option value="1C">도로시 블루</option>
+				<option value="1D">레오나 핑크</option>
+				<option value="1E">코스모 블루</option>
+				<option value="1F">파루루 그린</option>
+				<option value="20">미카 레드</option>
+				<option value="21">아로마 브라운</option>
+				<option value="22">하이디 골드</option>
+				<option value="23">아티 핑크</option>
+				<option value="24">그레이 실버</option>
+				<option value="2D">가루루 블랙</option>
+				<option value="2F">쥬논 퍼플</option>
+				<option value="30">피논 블루</option>
+				<option value="2E">카논 핑크</option>
+				<option value="32">페퍼 베이지</option>
+				<option value="31">치리 그린</option>
+				<option value="47">유이 옐로</option>
+				<option value="48">니노 그린</option>
+				<option value="49">미루 그레이</option>
+				<option value="4A">슈카 퍼플</option>
+				<option value="52">쇼고 옐로</option>
+				<option value="53">아사히 레드</option>
+				<option value="54">코요이 블루</option>
+				<option value="5A">하츠네미쿠 그린</option>
+				<option value="59">파라라 그린</option>
+
+
+
+        </select>
+        <select id="select_04" >
+				<option value="01" selected>모카 브라운</option>
+				<option value="02">스카이 블루</option>
+				<option value="03">퓨어 스트로베리</option>
+				<option value="04">튀는 멜론 소다</option>
+				<option value="06">매직 파티</option>
+				<option value="08">반짝 반짝 문라이트</option>
+				<option value="09">엔젤 하트(라라dlc)</option>
+				<option value="0A">슈팅 스타(미래dlc)</option>
+				<option value="0B">나이트 오브 다크니스</option>
+				<option value="0C">이터널 루즈</option>
+				<option value="0D">시크릿 레인보우</option>
+				<option value="0E">상쾌한 포레스트(라라dlc)</option>
+				<option value="0F">오션 머메이드</option>
+				<option value="13">레이니 물방울</option>
+				<option value="14">칠석제 스타</option>
+				<option value="15">불꽃놀이</option>
+				<option value="17">캣츠 아이</option>
+				<option value="18">트릭스터 컬러 렌즈(소피dlc)</option>
+				<option value="1D">큐피드</option>
+				<option value="19">클래식 인형</option>
+				<option value="20">스칼렛 루비</option>
+				<option value="22">크리스마스 컬러렌즈</option>
+				<option value="23">마시멜로우 오렌지</option>
+				<option value="28">글썽 글썽 눈동자</option>
+				<option value="29">반해버린 하트</option>
+				<option value="2A">쥬얼리 심포니</option>
+				<option value="2C">사일런트 그레이</option>
+				<option value="2D">레드블루 컬러렌즈</option>
+				<option value="2F">채색 블루 (미래dlc)</option>
+				<option value="33">트윈캣 컬러렌즈(라라dlc)</option>
+				<option value="34">또렷하게 그린</option>
+				<option value="35">유메카와☆아이</option>
+				<option value="36">차분한 블랙</option>
+				<option value="3A">또렷하게 옐로우</option>
+				<option value="3D">그린티</option>
+				<option value="41">보라고양눈(라라dlc)</option>
+
 
         </select>
         <select id="select_05">
@@ -237,9 +285,9 @@
 				<option value="03">다크브라운</option>
 			</select>
         <select id="select_06">
-				<option value="00">안경없음</option>
+				<option value="00" selected>안경없음</option>
 				<option value="0B">아티안경</option>
-				<option value="0C">던도부장 안경</option>
+				<option value="0C">선도부장 안경</option>
 				<option value="0D">뿔테 안경</option>
 				<option value="0E">모노클</option>
 				<option value="10">2001안경</option>
@@ -257,7 +305,7 @@
 
 		</select>
 		  <select id="select_07">
-				<option value="00">원포인트없음</option>
+				<option value="00" selected>원포인트없음</option>
 				<option value="01">눈밑점</option>
 				<option value="02">주근깨</option>
 				<option value="03">러블리립</option>
@@ -270,9 +318,14 @@
 				<option value="0C">빙글빙글볼터치</option>
 
 		  </select>
-        <button onclick="calculate();">버튼</button>
-        <textarea id="txt_result">
-            결과가 나올 곳
-        </textarea>
+        <button onclick="calculate();">코드생성</button>
+		<textarea id="txt_result">CODE</textarea>
+		<div>
+			<h4>※ 주의사항</h4>
+			1. 헤어파츠를 프리파라캐릭터로 고를경우 헤어컬러는 각 캐릭터의 고유 헤어컬러로 적용됩니다. 별도로 헤어컬러를 적용하고싶은경우 문의바랍니다 (※ DLC캐릭터파츠는 헤어컬러 적용됩니다)<br>
+			2. 얼굴형태를 프리파라캐릭터로 고를경우 아이컬러는 각 캐릭터의 고유 아이어컬로 적용됩니다. 별도로 아이컬러를 적용하고싶은경우 문의바랍니다<br>
+			3. 얼굴형태를 프리파라캐릭터로 고를경우 피부색상은 보통으로 하셔야합니다. 다른피부를 고르면 머리와 몸이 색상이 따로놉니다. (※쥬리,쟈니스,파라라는 미백, 페퍼는 구릿빛)<br>
+			4. 생성된 데이터를 임의로 수정하지 마시고 그대로 복사하여 작업자에게 인계해주세요.
+		</div>
     </body>
 </html>
