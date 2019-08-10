@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script>
+            function calculate() {
+                var result = document.getElementById("select_01").value
+                    + document.getElementById("select_02").value
+                    + document.getElementById("select_03").value
+                    + document.getElementById("select_04").value
+                    + document.getElementById("select_05").value
+                    + document.getElementById("select_06").value;
+
+                document.getElementById("txt_result").value = result;
+            }
+        </script>
+    </head>
+    <body>
+        <select id="select_01">
+            <option>이런식으로 아이템을 넣어주면 됨</option>
+        </select>
+        <select id="select_02">
+            <option>기본적으로 여기에 적는 텍스트가 밸류값이지만</option>
+            <option value="ㅗㅜㅑ">이렇게 밸류를 따로 지정해줄수도 있음</option>
+        </select>
+        <select id="select_03">
+            <option>기본적으로 가장 첫번째 아이템이 선택되어 있지만</option>
+            <option>브라우저에 따라 아무것도 선택되지 않은 상태일수도 있고</option>
+            <option selected>이렇게 selected 옵션을 넣어주면 이 아이템이 기본적으로 선택되어있음</option>
+            <option>다음은 네가 써준 예시대로 만들어보겠음</option>
+        </select>
+        <select id="select_04">
+            <option value="04">사과</option>
+            <option value="17">바나나</option>
+            <option value="3E">귤</option>
+        </select>
+        <select id="select_05"></select>
+        <select id="select_06"></select>
+        <button onclick="calculate();">버튼</button>
+        <textarea id="txt_result">
+            결과가 나올 곳
+        </textarea>
+    </body>
+</html>
